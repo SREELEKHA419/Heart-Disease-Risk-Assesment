@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heart Disease Risk Assessment</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>❤️ Heart Disease Risk Assessment</h1>
+    <form method="post">
+      <div class="grid">
+
+        <div>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="John Doe" required>
+        </div>
+
+        <div>
+          <label for="age">Age (years)</label>
+          <input type="number" name="age" id="age" placeholder="e.g. 45" required>
+        </div>
+
+        <div>
+          <label for="sex">Sex</label>
+          <select name="sex" id="sex">
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+            <option value="2">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="cp">Chest Pain Type (0–3)</label>
+          <select name="cp" id="cp">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="trestbps">Resting BP (mmHg)</label>
+          <input type="number" name="trestbps" id="trestbps" placeholder="e.g. 130" required>
+        </div>
+
+        <div>
+          <label for="chol">Cholesterol (mg/dL)</label>
+          <input type="number" name="chol" id="chol" placeholder="e.g. 180" required>
+        </div>
+
+        <div>
+          <label for="fbs">Fasting Blood Sugar</label>
+          <select name="fbs" id="fbs">
+            <option value="0">≤ 120</option>
+            <option value="1">> 120</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="restecg">Resting ECG (0 or 1)</label>
+          <select name="restecg" id="restecg">
+            <option>0</option>
+            <option>1</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="thalach">Max Heart Rate (bpm)</label>
+          <input type="number" name="thalach" id="thalach" placeholder="e.g. 150" required>
+        </div>
+
+        <div>
+          <label for="exang">Exercise-induced Angina</label>
+          <select name="exang" id="exang">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="oldpeak">ST Depression (oldpeak)</label>
+          <input type="number" step="0.1" name="oldpeak" id="oldpeak" placeholder="e.g. 1.2" required>
+        </div>
+
+        <div>
+          <label for="slope">Slope of ST (0–2)</label>
+          <select name="slope" id="slope">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="ca">Major Vessels (0–3)</label>
+          <select name="ca" id="ca">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="thal">Thalassemia</label>
+          <select name="thal" id="thal">
+            <option value="1">Normal (1)</option>
+            <option value="2">Fixed Defect (2)</option>
+            <option value="3">Reversible Defect (3)</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="centered">
+        <button type="submit">🔍 Predict Risk</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

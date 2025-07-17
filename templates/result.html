@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heart Disease Risk Result</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🩺 Heart Health Risk Result 🌡️</h1>
+
+    <div class="result {{ prediction|lower }}">
+      <h2>🧾 Prediction: <strong>{{ prediction }} Risk</strong></h2>
+      <p>📊 Probability: <strong>{{ probability }}%</strong></p>
+    </div>
+
+    {% if prediction == 'High' %}
+      <div class="tip-box red-tip">
+        <h3>🚨 Health Advisory</h3>
+        <ul>
+          <li>Consult a cardiologist immediately.</li>
+          <li>Adopt a low-sodium, heart-healthy diet.</li>
+          <li>Exercise regularly and avoid smoking.</li>
+          <li>Manage stress and monitor blood pressure.</li>
+        </ul>
+      </div>
+    {% else %}
+      <div class="tip-box green-tip">
+        <h3>✅ Keep It Up!</h3>
+        <ul>
+          <li>Maintain regular physical activity.</li>
+          <li>Follow a balanced diet rich in fiber.</li>
+          <li>Get regular health checkups.</li>
+          <li>Avoid excessive salt and sugar.</li>
+        </ul>
+      </div>
+    {% endif %}
+
+    
+    
+
+    <div class="centered" style="margin-top: 30px;">
+      <a href="/" class="btn">🔄 Go Back & Predict Again</a>
+    </div>
+  </div>
+</body>
+</html>
